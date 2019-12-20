@@ -12,16 +12,23 @@ fetch('https://jsonplaceholder.typicode.com/users')
    })
    .then(response => response.json())
    .then(posts => console.log(posts));
+   .catch(error => console.log(error));
 
 const myAsyncFunction = async () => {
-    const usersResponse = await fetch('https://jsonplaceholder.typicode.com/users')
-    const users = await usersResponse.json();
-    const secondUser = users[1];
-    console.log(secondUser);
-    const postsResponse = fetch(
-       `https://jsonplaceholder.typicode.com/posts?userId=${secondUser.id}`
-    );
-    const posts = await postsResponse.json();
-    console.log(posts);
+    try {
+        const usersResponse = await fetch('https://jsonplaceholder.typicode.com/users')
+        const users = await usersResponse.json();
+        const secondUser = users[1];
+        console.log(secondUser);
+        const postsResponse = fetch(
+        `https://jsonplaceholder.typicode.com/posts?userId=${secondUser.id}`
+        );
+        const posts = await postsResponse.json();
+        console.log(posts);
+    } catch (err) {
+        console.log('there was an error');
+    }
 }
+
+
 ```
