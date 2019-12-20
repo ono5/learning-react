@@ -30,3 +30,19 @@ yarn add gh-pages
     "deploy": "gh-pages -d build"
   },
 ```
+
+```
+yarn deploy
+
+git add -A
+git commit -m "adding files for github pages"
+git push
+```
+
+Great!
+
+You go to setting page on GitHub, and see GitHub Pages.
+
+```
+Your site is published at https://ono5.github.io/learning-react/
+```
