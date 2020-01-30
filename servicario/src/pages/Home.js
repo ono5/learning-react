@@ -21,10 +21,28 @@ import './Home.css'
 
 class Home extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            message: 'Super Message!!!'
+        }
+    }
+
+    // lifecycle function
+    // like init method of golang
+    componentDidMount() {
+        // alert('I am mounted!!!!')
+        setTimeout(() => {
+            this.setState({message: 'I am updated Message!!!'})
+        }, 1000)
+    }
+
     render() {
+        const { message } = this.state
         return (
             <div className="container">
                 <h1>I am Home Class Page</h1>
+                <p>{message}</p>
             </div>
         )
     }
