@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Counter from '../components/Counter'
-import './Home.css'
+import Counter from 'components/Counter'
+import 'pages/Home.css'
 
 // const Home = () => {
 
