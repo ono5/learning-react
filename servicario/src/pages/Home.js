@@ -46,10 +46,10 @@ class Home extends React.Component {
 
     displayMessage = (type, count) => {
         if (type === 'increment') {
-            alert(`Your number was increment! Current value: ${count}`)
+            // alert(`Your number was increment! Current value: ${count}`)
             return
         }
-        alert(`Your number was decrement! Current value: ${count}`)
+        // alert(`Your number was decrement! Current value: ${count}`)
     }
 
     render() {
