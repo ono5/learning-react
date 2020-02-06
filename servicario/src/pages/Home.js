@@ -1,8 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
-import Navbar from '../components/Navbar'
-import NavbarClone from '../components/NavbarClone'
+
 import Hero from '../components/Hero'
 import ServiceItem from '../components/service/ServiceItem'
 import { getServices } from 'store'
@@ -26,8 +25,7 @@ class Home extends React.Component {
     const { services } = this.state
     return (
       <div>
-        <Navbar />
-        <NavbarClone />
+
         <Hero />
         
 
