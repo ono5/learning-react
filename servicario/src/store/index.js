@@ -1,3 +1,23 @@
+import { createStore, combineReducers } from 'redux'
+
+// actions | action creators
+// dispatch
+// reducers
+// connect
+const initStore = () => {
+  const serviceApp = combineReducers({
+    service: () => ({testingData: 'Hello World', testingNumber: 10})
+  })
+
+  // https://github.com/zalmoxisus/redux-devtools-extension#1-with-redux
+  const browserSupport = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  const store = createStore(serviceApp, browserSupport)
+
+  return store
+}
+
+export default initStore
+
 const services = [{
     id: '2asd8sa7d98',
     user: 'some_id_1',
@@ -16,7 +36,5 @@ const services = [{
     image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
   }]
   
-  
-  
-  export const getServices = () => [...services]
+export const getServices = () => [...services]
   
