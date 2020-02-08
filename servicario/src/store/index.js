@@ -1,4 +1,5 @@
 import { createStore, combineReducers } from 'redux'
+import servicesReducer from 'reducers'
 
 // actions | action creators
 // dispatch
@@ -6,14 +7,7 @@ import { createStore, combineReducers } from 'redux'
 // connect
 const initStore = () => {
   const serviceApp = combineReducers({
-    service: (state = {items: []}, action) => {
-
-      if (action.type === 'FETCH_SERVICES') {
-        return {...state, items: action.services}
-      }
-
-      return state  
-    }
+    service: servicesReducer
   })
 
   // https://github.com/zalmoxisus/redux-devtools-extension#1-with-redux
