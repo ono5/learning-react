@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
-
+import { connect } from 'react-redux' // HOC
 import Hero from '../components/Hero'
 import ServiceItem from '../components/service/ServiceItem'
 import { getServices } from 'store'
@@ -20,15 +20,13 @@ class Home extends React.Component {
   renderServices = (services) => 
     services.map(service => <ServiceItem key={service.id} service={service} />)
   
-
   render() {
     const { services } = this.state
+    const { testingData, testingNumber } = this.props.test
+    // debugger
     return (
       <div>
-
         <Hero />
-        
-
         <section className="section section-feature-grey is-medium">
           <div className="container">
             <div className="title-wrapper has-text-centered">
@@ -49,4 +47,6 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+const mapStateToProps = state => ({test: state.service})
+    
+export default connect(mapStateToProps)(Home)
