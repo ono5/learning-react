@@ -1,6 +1,7 @@
 # servicario
 
 ## React Routing
+
 [REACT TRAINING / REACT ROUTER](https://reacttraining.com/react-router/web/guides/quick-start)
 
 ```
@@ -14,4 +15,10 @@ npm install --save react-router-dom@5.1.2
 
 ```
 npm install --save redux react-redux
+```
+
+## FireBase
+
+```
+npm install --save firebase
 ```
